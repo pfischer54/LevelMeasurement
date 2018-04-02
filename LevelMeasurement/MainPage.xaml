@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="LevelMeasurement.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LevelMeasurement"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <TextBox x:Name="connection" HorizontalAlignment="Left" Margin="50,90,0,0" Text="{x:Bind ViewModel.DeviceDetails(ViewModel.DI), Mode=OneWay}" VerticalAlignment="Top" Width="800"  BorderBrush="#FF0C0B0B" />
+            <TextBox x:Name="status" HorizontalAlignment="Left" Margin="50,10,0,0" Text="{x:Bind ViewModel.Status, Mode=OneWay}" VerticalAlignment="Top" Width="800"  BorderBrush="#FF0C0B0B" />
+            <Button Content="Reset" HorizontalAlignment="Left" Height="44" Margin="54,20,0,0" Width="91" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Page>
